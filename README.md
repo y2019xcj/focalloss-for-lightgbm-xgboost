@@ -33,12 +33,15 @@ clf_lgb = lgb.LGBMClassifier(**param_dist,random_state=2021)
 ```
 clf_lgb.fit(X_train, y_train)
 ```
-### 4.get probability result
+### 4.get probability result in your dataset
+Here val_data is your validation dataset.
+
 ```
-results_lgb_prob = clf_lgb.predict_proba(val_data.iloc[:,:factor_nums])
-results_lgb_prob = np.exp(results_lgb_prob)
-results_lgb_prob = np.multiply(results_lgb_prob, 1/np.sum(results_lgb_prob, axis=1)[:, np.newaxis])
+lgb_prob = clf_lgb.predict_proba(val_data)
+lgb_prob = np.exp(lgb_prob)
+results_lgb_prob = np.multiply(lgb_prob, 1/np.sum(lgb_prob, axis=1)[:, np.newaxis])
 ```
+and results_lgb_prob is the probability of your validation dataset.
 
 Ref:
 
