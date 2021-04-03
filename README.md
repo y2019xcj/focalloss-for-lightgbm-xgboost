@@ -6,6 +6,7 @@ now only support lightgbm for multi-class(classes > 3)
 ```
 import lightgbm as lgb
 import lossfunction as lf
+import numpy as np
 ```
 ### 2.init loss function
 ```
@@ -20,9 +21,7 @@ clf_lgb.fit(X_train, y_train)
 ```
 ### 4.get probability result
 ```
-def softmax(x):
-    exp_x = np.exp(x - np.max(x))
-    return exp_x / (np.sum(exp_x, axis=1, keepdims=True) + 1e-6)
 results_lgb_prob = clf_lgb.predict_proba(val_data.iloc[:,:factor_nums])
-results_lgb_prob = softmax(results_lgb_prob)
+results_lgb_prob = np.exp(results_lgb_prob)
+results_lgb_prob = np.multiply(results_lgb_prob, 1/np.sum(results_lgb_prob, axis=1)[:, np.newaxis])
 ```
