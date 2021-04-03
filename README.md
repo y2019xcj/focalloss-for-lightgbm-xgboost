@@ -1,4 +1,4 @@
-# focal loss and label smoothing in lightgbm(xgboost)
+# focal loss and label smoothing in lightgbm(xgboost) for multi-class
 This loss function contains focal loss[1] and label smoothing[2],now only support lightgbm for multi-class(classes > 3,it will support xgboost and binary class problem later)
 
 ### label smoothing
@@ -7,7 +7,9 @@ The smoothing value means the value of epsilon:
 
 ### focal loss
 and alpha,gamma is the parameter of focal loss,which is:
+
 ![image](https://user-images.githubusercontent.com/55391817/113477610-a6997b80-94b5-11eb-836d-0a65e7f92dd5.png)
+
 alpha is used for imbalanced sample,and gamma is used for hard-to-learn sample,and in multi-class problem,it's seems that the alpha is no use.
 
 
