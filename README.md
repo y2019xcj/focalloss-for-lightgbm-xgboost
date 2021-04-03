@@ -3,14 +3,15 @@ This loss function contains focal loss[1] and label smoothing[2],now only suppor
 
 ### label smoothing
 The smoothing value means the value of epsilon:
-![image](https://user-images.githubusercontent.com/55391817/113477413-1d357980-94b4-11eb-8099-e1a4853412a3.png)
+
+![image](https://user-images.githubusercontent.com/55391817/113477986-93d47600-94b8-11eb-9cce-5ba7dccf0365.png)
 
 ### focal loss
 and alpha,gamma is the parameter of focal loss,which is:
 
-![image](https://user-images.githubusercontent.com/55391817/113477610-a6997b80-94b5-11eb-836d-0a65e7f92dd5.png)
+![image](https://user-images.githubusercontent.com/55391817/113478054-f4fc4980-94b8-11eb-81b5-b10014af1a53.png)
 
-alpha is used for imbalanced sample,and gamma is used for hard-to-learn sample,and in multi-class problem,it's seems that the alpha is no use.
+alpha is used for imbalanced sample(It's no use while in multi-class task),and gamma is used for hard-to-learn sample,and in multi-class problem,it's seems that the alpha is no use.
 
 
 ## usage:
