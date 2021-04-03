@@ -1,4 +1,4 @@
-# loss-function-for-lightgbm-xgboost
+# focal loss and label smoothing in lightgbm(xgboost)
 This loss function contains focal loss[1] and label smoothing[2],now only support lightgbm for multi-class(classes > 3,it will support xgboost and binary class problem later)
 
 ### label smoothing
