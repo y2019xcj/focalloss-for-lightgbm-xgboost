@@ -1,5 +1,5 @@
 # focal loss and label smoothing in lightgbm(xgboost) for multi-class
-This loss function contains focal loss[1] and label smoothing[2],now only support lightgbm for multi-class(classes > 3,it will support xgboost and binary class problem later)
+This loss function contains focal loss[1] and label smoothing[2],now only support lightgbm for multi-class(classes > 3,it will support xgboost and binary class task later)
 
 ### label smoothing
 The smoothing value means the value of epsilon:
