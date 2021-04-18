@@ -17,8 +17,9 @@ while the first derivative of multi-class loss function is(From: https://zhuanla
      
 and the second derivative is:
 
+![image](https://user-images.githubusercontent.com/55391817/115137577-7a573080-a059-11eb-8107-dfe706afa357.png)
 
-     ![image](https://user-images.githubusercontent.com/55391817/115137531-47ad3800-a059-11eb-9df7-045119509bc3.png)
+   
    
 To speed up the calculate of loss function,we calculate this formula by numpy.
 
