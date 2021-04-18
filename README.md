@@ -8,6 +8,15 @@ and alpha,gamma is the parameter of focal loss,which is:
 
 alpha is used for imbalanced sample(It's no use while in multi-class task),and gamma is used for hard-to-learn sample,and in multi-class problem,it's seems that the alpha is no use.
 
+in xgboost/lightgbm,we should provide the calculate formula of grad and hess.
+
+while the first derivative of multi-class loss function is(From: https://zhuanlan.zhihu.com/p/149419189):
+     ![image](https://user-images.githubusercontent.com/55391817/115137525-3fed9380-a059-11eb-9484-977b81dbda8c.png)
+     
+and the second derivative is:
+     ![image](https://user-images.githubusercontent.com/55391817/115137531-47ad3800-a059-11eb-9df7-045119509bc3.png)
+   
+To speed up the calculate of loss function,we calculate this formula by numpy.
 
 ## usage:
 
@@ -41,4 +50,3 @@ and results_lgb_prob is the probability of your validation dataset.
 Ref:
 
 [1] Lin T Y ,  Goyal P ,  Girshick R , et al. Focal Loss for Dense Object Detection[J]. IEEE Transactions on Pattern Analysis & Machine Intelligence, 2017, PP(99):2999-3007.
-
