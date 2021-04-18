@@ -1,10 +1,5 @@
-# focal loss and label smoothing in lightgbm(xgboost) for multi-class
-This loss function contains focal loss[1] and label smoothing[2],now only support lightgbm for multi-class(classes > 3,it will support xgboost and binary class task later)
-
-### label smoothing
-The smoothing value means the value of epsilon:
-
-![image](https://user-images.githubusercontent.com/55391817/113477986-93d47600-94b8-11eb-9cce-5ba7dccf0365.png)
+# focal loss in lightgbm(xgboost) for multi-class
+This loss function contains focal loss[1],now only support lightgbm for multi-class(classes > 3,it will support xgboost and binary class task later)
 
 ### focal loss
 and alpha,gamma is the parameter of focal loss,which is:
@@ -47,4 +42,3 @@ Ref:
 
 [1] Lin T Y ,  Goyal P ,  Girshick R , et al. Focal Loss for Dense Object Detection[J]. IEEE Transactions on Pattern Analysis & Machine Intelligence, 2017, PP(99):2999-3007.
 
-[2] Szegedy C , Vanhoucke V , Ioffe S , et al. Rethinking the Inception Architecture for Computer Vision[J]. IEEE, 2016:2818-2826.
