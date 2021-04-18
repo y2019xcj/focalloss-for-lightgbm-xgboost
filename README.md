@@ -13,7 +13,11 @@ in xgboost/lightgbm,we should provide the calculate formula of grad and hess.
 while the first derivative of multi-class loss function is(From: https://zhuanlan.zhihu.com/p/149419189):
      ![image](https://user-images.githubusercontent.com/55391817/115137525-3fed9380-a059-11eb-9484-977b81dbda8c.png)
      
+     
+     
 and the second derivative is:
+
+
      ![image](https://user-images.githubusercontent.com/55391817/115137531-47ad3800-a059-11eb-9df7-045119509bc3.png)
    
 To speed up the calculate of loss function,we calculate this formula by numpy.
